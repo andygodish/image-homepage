@@ -1,3 +1,7 @@
+## v2.1.2-2 - 2026-08-23
+
+- [015e842](https://github.com/andygodish/image-homepage/-/commit/015e842a90d487923b329c90c37d413e7be267e9) chore: added docker-compose workflow for standup up single container
+
 ## v2.1.2-1 - 2026-08-23
 
 - [6321320](https://github.com/andygodish/image-homepage/-/commit/6321320c97d2b231e244cc13c22225b65ef3af9c) fix(ci): revmoed extra 'v' in image tag
