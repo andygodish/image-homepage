@@ -1,6 +1,6 @@
 services:
   homepage:
-    image: ghcr.io/andygodish/homepage:v2.1.2-1
+    image: ghcr.io/andygodish/homepage:v2.1.2-2
     pull_policy: always
     container_name: homepage
     restart: unless-stopped
