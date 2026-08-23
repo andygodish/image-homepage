@@ -24,6 +24,18 @@
       ],
       "depNameTemplate": "andygodish/upver",
       "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^docker-compose\\.ya?ml$/"
+      ],
+      "matchStrings": [
+        "image:\\s+ghcr\\.io/andygodish/homepage:(?<currentValue>[^\\s]+)"
+      ],
+      "depNameTemplate": "andygodish/image-homepage",
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "loose"
     }
   ],
   "packageRules": [
@@ -47,8 +59,6 @@
     }
   ],
   "docker-compose": {
-    "fileMatch": [
-      "(^|/)docker-compose\\.yaml$"
-    ]
+    "enabled": false
   }
 }
