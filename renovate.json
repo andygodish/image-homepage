@@ -34,7 +34,10 @@
       "matchPackagePrefixes": [
         "ghcr.io/andygodish/"
       ],
-      "versioning": "loose"
+      "versioning": "loose",
+      "registryUrls": [
+        "https://ghcr.io"
+      ]
     },
     {
       "matchManagers": [
