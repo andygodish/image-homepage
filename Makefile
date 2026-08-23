@@ -3,7 +3,7 @@
 # ==============================================================================
 
 HOMEPAGE_VERSION ?= $(shell sed -n 's/^ARG HOMEPAGE_VERSION="//p' Dockerfile | cut -d'"' -f1 | head -n 1 | tr -d '\n\r ')
-VERSION_TAG      ?= $(shell [ -s version.txt ] && echo "v$$(cat version.txt | tr -d '\n\r ')" || echo "latest")
+VERSION_TAG      ?= $(shell [ -s version.txt ] && VERSION=$$(cat version.txt | tr -d "[:space:]") && echo "v$${VERSION#v}" || echo "latest")
 
 REGISTRY        := ghcr.io/andygodish
 IMAGE_NAME      := homepage

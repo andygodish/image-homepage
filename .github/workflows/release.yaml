@@ -94,15 +94,17 @@ jobs:
       - name: Read version
         id: ver
         run: |
-          VERSION=$(cat version.txt)
+          RAW_VERSION=$(cat version.txt)
+          VERSION="${RAW_VERSION#v}"
           echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "v_version=v$VERSION" >> $GITHUB_OUTPUT
 
       - name: Create tag
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git tag "v${{ steps.ver.outputs.version }}"
-          git push origin "v${{ steps.ver.outputs.version }}"
+          git tag "${{ steps.ver.outputs.v_version }}"
+          git push origin "${{ steps.ver.outputs.v_version }}"
 
   build-and-push:
     needs: classify
@@ -117,7 +119,8 @@ jobs:
       - name: Extract version
         id: ver
         run: |
-          VERSION=$(cat version.txt)
+          RAW_VERSION=$(cat version.txt)
+          VERSION="${RAW_VERSION#v}"
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "v_version=v$VERSION" >> $GITHUB_OUTPUT
           echo "Release version: $VERSION (Tag: v$VERSION)"
