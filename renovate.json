@@ -24,26 +24,28 @@
       ],
       "depNameTemplate": "andygodish/upver",
       "datasourceTemplate": "github-releases"
-    },
-    {
-      "customType": "regex",
-      "managerFilePatterns": [
-        "/^docker-compose\\.ya?ml$/"
-      ],
-      "matchStrings": [
-        "image:\\s+ghcr\\.io/andygodish/homepage:(?<currentValue>[^\\s]+)"
-      ],
-      "depNameTemplate": "ghcr.io/andygodish/homepage",
-      "datasourceTemplate": "docker",
-      "versioningTemplate": "docker"
     }
   ],
   "packageRules": [
+    {
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackagePrefixes": [
+        "ghcr.io/andygodish/"
+      ],
+      "versioning": "loose"
+    },
     {
       "matchManagers": [
         "github-actions"
       ],
       "groupName": "GitHub Actions dependencies"
     }
-  ]
+  ],
+  "docker-compose": {
+    "fileMatch": [
+      "(^|/)docker-compose\\.yaml$"
+    ]
+  }
 }
