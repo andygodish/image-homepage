@@ -24,6 +24,18 @@
       ],
       "depNameTemplate": "andygodish/upver",
       "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^docker-compose\\.ya?ml$/"
+      ],
+      "matchStrings": [
+        "image:\\s+ghcr\\.io/andygodish/homepage:(?<currentValue>[^\\s]+)"
+      ],
+      "depNameTemplate": "ghcr.io/andygodish/homepage",
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "docker"
     }
   ],
   "packageRules": [

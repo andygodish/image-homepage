@@ -1,0 +1,17 @@
+services:
+  homepage:
+    image: ghcr.io/andygodish/homepage:v2.1.2-1
+    pull_policy: always
+    container_name: homepage
+    restart: unless-stopped
+    environment:
+      PUID: "10004"
+      PGID: "10004"
+      HOMEPAGE_ALLOWED_HOSTS: "localhost:3000,127.0.0.1:3000"
+    volumes:
+      - homepage_config_dir:/app/config
+    ports:
+      - "127.0.0.1:3000:3000"
+
+volumes:
+  homepage_config_dir:
