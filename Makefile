@@ -55,7 +55,7 @@ build-multiarch: verify-env
 
 up: verify-ports fix-permissions
 	@echo "Running standalone Homepage stack..."
-	docker compose -f $(COMPOSE_FILE) up -d --remove-orphans
+	docker compose -f $(COMPOSE_FILE) up -d --pull always --remove-orphans
 	@echo "Homepage is running at http://127.0.0.1:$(HOST_PORT). Run 'make status' to verify health."
 
 run: up
@@ -76,12 +76,15 @@ status ps:
 
 verify-ports:
 	@echo "Running preflight network checks..."
-	@if lsof -Pi :$(HOST_PORT) -sTCP:LISTEN -t >/dev/null 2>&1; then \
-		echo "ERROR: Port $(HOST_PORT) is already occupied on the host system."; \
-		echo "Please stop the conflicting service before running Homepage."; \
+	@if docker inspect -f "{{.State.Running}}" $(CONTAINER_NAME) 2>/dev/null | grep -qx true; then \
+		echo "Existing $(CONTAINER_NAME) container is running; Compose may recreate it for upgrades."; \
+	elif lsof -Pi :$(HOST_PORT) -sTCP:LISTEN -t >/dev/null 2>&1; then \
+		echo "ERROR: Port $(HOST_PORT) is already occupied by another process."; \
+		echo "Stop that process or run with a different HOST_PORT before starting Homepage."; \
 		exit 1; \
+	else \
+		echo "Target network port $(HOST_PORT) is clear."; \
 	fi
-	@echo "Target network port $(HOST_PORT) is clear."
 
 fix-permissions:
 	@echo "Checking and setting volume directory ownership for non-root Homepage..."
