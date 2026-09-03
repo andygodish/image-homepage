@@ -1,3 +1,18 @@
+## v2.2.0-3 - 2026-09-03
+
+- [29c1bfc](https://github.com/andygodish/image-homepage/-/commit/29c1bfcb0344def6c046a1cfbd0bb6ea6aa94c7e) fix: make up handles upgrades cleanly
+- [e122e5f](https://github.com/andygodish/image-homepage/-/commit/e122e5f5292e97c9bfdaf6fd12a126815891189b) chore(deps): update ghcr.io/andygodish/homepage docker tag to v2.2.0-0 (#11)
+- [6de62a5](https://github.com/andygodish/image-homepage/-/commit/6de62a5b54afea593865936e741b717ff909405c) fix: renovate config
+
+## v2.2.0-2 - 2026-09-03
+
+- [e122e5f](https://github.com/andygodish/image-homepage/-/commit/e122e5f5292e97c9bfdaf6fd12a126815891189b) chore(deps): update ghcr.io/andygodish/homepage docker tag to v2.2.0-0 (#11)
+- [6de62a5](https://github.com/andygodish/image-homepage/-/commit/6de62a5b54afea593865936e741b717ff909405c) fix: renovate config
+
+## v2.2.0-1 - 2026-09-03
+
+- [6de62a5](https://github.com/andygodish/image-homepage/-/commit/6de62a5b54afea593865936e741b717ff909405c) fix: renovate config
+
 ## v2.2.0-0 - 2026-09-03
 
 - [921f650](https://github.com/andygodish/image-homepage/-/commit/921f650d25d9c790fd87f3f04fbfba18a39109e6) chore(deps): update ghcr.io/gethomepage/homepage docker tag to v2.2.0 (#9)
