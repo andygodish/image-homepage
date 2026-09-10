@@ -3,7 +3,7 @@
 # ==============================================================================
 
 # renovate: datasource=docker depName=ghcr.io/gethomepage/homepage
-ARG HOMEPAGE_VERSION="v2.2.0"
+ARG HOMEPAGE_VERSION="v2.3.0"
 
 FROM ghcr.io/gethomepage/homepage:${HOMEPAGE_VERSION}
 
