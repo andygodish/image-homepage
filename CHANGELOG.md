@@ -1,3 +1,12 @@
+## v2.4.0-0 - 2026-09-18
+
+- [ea4eee3](https://github.com/andygodish/image-homepage/-/commit/ea4eee327b45020ca0413100972925a3d2d3d27b) chore(deps): update ghcr.io/gethomepage/homepage docker tag to v2.4.0 (#15)
+- [ff3c8be](https://github.com/andygodish/image-homepage/-/commit/ff3c8be6fc6980e688703527dd2e8b8c0910ecc5) chore(deps): update ghcr.io/andygodish/homepage docker tag to v2.3.0-0 (#13)
+
+## v2.3.0-1 - 2026-09-10
+
+- [ff3c8be](https://github.com/andygodish/image-homepage/-/commit/ff3c8be6fc6980e688703527dd2e8b8c0910ecc5) chore(deps): update ghcr.io/andygodish/homepage docker tag to v2.3.0-0 (#13)
+
 ## v2.3.0-0 - 2026-09-10
 
 - [742bd92](https://github.com/andygodish/image-homepage/-/commit/742bd92b7014bf39d5721a4f4ddd7d528d120bc2) chore(deps): update ghcr.io/gethomepage/homepage docker tag to v2.3.0 (#12)
