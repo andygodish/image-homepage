@@ -1,3 +1,7 @@
+## v2.6.0-1 - 2026-10-21
+
+- [c8187ad](https://github.com/andygodish/image-homepage/-/commit/c8187ad0bf7cd80409525f51f8e3ffbe8a7e4b36) chore(deps): update ghcr.io/andygodish/homepage docker tag to v2.6.0-0 (#19)
+
 ## v2.6.0-0 - 2026-10-20
 
 - [08f0836](https://github.com/andygodish/image-homepage/-/commit/08f083659828b88674ab21fd975db6575f58ff77) chore(deps): update ghcr.io/gethomepage/homepage docker tag to v2.6.0 (#18)
